@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>QA Dashboard</title>
+  </head>
+
+  <body class="container">
+    <h1 class="display-3">PrinterLogic QA Dashboard</h1>
+    <br>
+
+
+  <p>Last Updated: <span id="datetime"></span></p>
+
+  <script>
+      var dt = new Date();
+      document.getElementById("datetime").innerHTML = (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+(("0"+dt.getDate()).slice(-2)) +"/"+  (dt.getFullYear()) +" @ "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+  </script>
+
+
+  <div id="mx1" class="carousel slide" data-ride="carousel" data-interval="10000">
+    <div class="carousel-inner">
+    <!-- Begin Legend -->
+    <div class="carousel-item active">
+      <h2>Legend</h2>
+      <div class="progress border border-dark" style="height: 40px; line-height: 40px;">
+        <div class="passed" role="progressbar" style="width: 16.667%" aria-valuenow="16.667%" aria-valuemin="0" aria-valuemax="100"><strong>PASSED</strong></div>
+        <div class="blocked" role="progressbar" style="width: 16.667%" aria-valuenow="16.667%" aria-valuemin="0" aria-valuemax="100"><strong>BLOCKED</strong></div>
+        <div class="retest" role="progressbar" style="width: 16.667%" aria-valuenow="16.667%" aria-valuemin="0" aria-valuemax="100"><strong>RETEST</strong></div>
+        <div class="failed_new" role="progressbar" style="width: 16.667%" aria-valuenow="16.667%" aria-valuemin="0" aria-valuemax="100"><strong>FAILED</strong></div>
+        <div class="failed_known" role="progressbar" style="width: 16.667%" aria-valuenow="16.667%" aria-valuemin="0" aria-valuemax="100"><strong>FAILED/KNOWN</strong></div>
+        <div class="untested" role="progressbar" style="width: 16.667%" aria-valuenow="16.667%" aria-valuemin="0" aria-valuemax="100"><strong>UNTESTED</strong></div>
+      </div>
+      <br>
+    <!-- End Legend -->
+
+    <!-- Begin On Prem 18.2 Regression Progress -->
+    <!-- <div class="border border-dark">
+      <h2>On Prem 18.2.1.170+ Mx#1 REGRESSION (4 / 188 Untested)<span> RELEASED</span></h2>
+            <div class="progress" style="height: 40px; line-height: 40px;">
+        <div class="progress-bar-1" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"><strong>89%</strong></div>
+        <div class="progress-bar-2" role="progressbar" style="width: 1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"><strong>1%</strong></div>
+        <div class="progress-bar-3" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"><strong>7%</strong></div>
+        <div class="progress-bar-4" role="progressbar" style="width: 1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"><strong>1%</strong></div>
+        <div class="progress-bar-5" role="progressbar" style="width: 3%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"><strong>3%</strong></div>
+      </div><br>
+      </div><br> -->
+      <!-- End On Prem 18.2 Regression Progress -->
+
+    <!-- Begin On Prem 18.3.1.X Smoke Progress -->
+      <div class="border border-dark">
+        <h2>PrinterCloud 18.3 Gen2 Smoke & Regression<span><br> STARTED 3/11</span> | 147 of 409 tests completed</h2>
+        <div class="progress" style="height: 40px; line-height: 40px;">
+          <div class="passed" role="progressbar" style="width: 46%" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100"><strong>46%</strong></div>
+          <div class="blocked" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"><strong>7%</strong></div>
+          <div class="retest" role="progressbar" style="width: 1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"><strong>1%</strong></div>
+          <div class="failed_new" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"><strong>5%</strong></div>
+          <div class="failed_known" role="progressbar" style="width: 6%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"><strong>6%</strong></div>
+          <div class="untested" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"><strong>35%</strong></div>
+        </div><br>
+        <h2>65% COMPLETED</h2>
+      </div>
+    <br>
+    <!-- End On Prem 18.3.1.X Smoke Progress -->
+
+    <!-- Begin Master Console Hotfix Progress -->
+    <!-- <div class="border border-dark">
+      <h2>Master Console Hotfix (22 / 45 Untested)<span> Starts 11/2</span></h2>
+      <div class="progress" style="height: 40px; line-height: 40px;">
+        <div class="progress-bar-1" role="progressbar" style="width: 51%" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100"><strong>51%</strong></div>
+        <div class="progress-bar-2" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><strong>10%</strong></div>
+        <div class="progress-bar-3" role="progressbar" style="width: 19%" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100"><strong>19%</strong></div>
+        <div class="progress-bar-4" role="progressbar" style="width: 3%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"><strong>3%</strong></div>
+        <div class="progress-bar-5" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"><strong>49%</strong></div>
+      </div><br>
+    </div> -->
+  <br>
+  <!-- End Master Console Hotfix Progress -->
+
+
+
+      <!-- <h2>Notes: <span style='color:red;'> 18.2 Mx#1 testing is blocked by PI-11694</span></h2><br> -->
+      <!-- <img class="mx-auto d-block" src="img/builds.jpg" alt="Latest Builds"> -->
+      <!-- <img class="mx-auto d-block" src="img/version.jpg" alt="Latest Builds"> -->
+  </div>
+
+
+
+  <!-- Begin PrinterCloud 18.3 Regression Progress -->
+  <!-- <div class="border border-dark">
+    <h2>On Prem 18.2.1.135+ Mx#1 (1 / 21 Untested)<span> Began Sept. 28</span></h2>
+    <div class="progress" style="height: 40px; line-height: 40px;">
+      <div class="progress-bar-1" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"><strong>76%</strong></div>
+      <div class="progress-bar-2" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><strong>10%</strong></div>
+      <div class="progress-bar-3" role="progressbar" style="width: 19%" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100"><strong>19%</strong></div>
+      <div class="progress-bar-4" role="progressbar" style="width: 3%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"><strong>3%</strong></div> -->
+      <!-- <div class="progress-bar-5" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"><strong>5%</strong></div>
+    </div><br>
+  </div>
+<br> -->
+<!-- End PrinterCloud 18.3 Regression Progress -->
+
+<!-- Begin Testrail Status -->
+    <!-- <div class="carousel-item">
+      <h3>On Prem 18.2 Mx #1 REGRESSION Status</h3>
+      <br>
+      <iframe src="https://printerlogic.testrail.com/index.php?/plans/view/1709" width="1200" height="400"></iframe>
+    </div> -->
+<!-- End Testrail Status -->
+
+
+<!-- Begin Testrail Progress -->
+
+<!-- End Testrail Progress -->
+
+<!-- Begin Bug Ticket Section -->
+
+
+    <!-- Begin Testrail Status -->
+        <div class="carousel-item">
+          <h3>PrinterCloud 18.3 Gen2 Smoke & Regression</h3>
+          <br>
+          <iframe src="https://printerlogic.testrail.com/index.php?/plans/view/2140" width="1200" height="400"></iframe>
+        </div>
+    <!-- End Testrail Status -->
+
+
+    <!-- Begin Testrail Progress -->
+        <div class="carousel-item">
+          <h3>PrinterCloud 18.3 Gen2 Smoke & Regression</h3>
+          <br>
+          <iframe src="https://printerlogic.testrail.com/index.php?/plans/progress/2140" width="1200" height="500"></iframe>
+        </div>
+    <!-- End Testrail Progress -->
+
+    <!-- Begin Bug Ticket Section -->
+        <!-- <div class="carousel-item">
+          <h2>On Prem 18.3.1.X+ Smoke Bug Status</h2>
+          <br>
+          <img class="mx-auto d-block" src="img/test_mx.jpg" alt="JIRA Mx tickets in testing">
+          <br>
+        </div> -->
+
+<!-- End Bug Ticket Section -->
+
+<!-- Begin Testrail Status -->
+    <!-- <div class="carousel-item">
+      <h2>PrinterCloud 1.2.x.x Status</h2>
+      <br>
+      <iframe src="https://printerlogic.testrail.com/index.php?/plans/view/1628" width="1200" height="400"></iframe>
+    </div> -->
+<!-- End Testrail Status -->
+
+<!-- Begin Testrail Progress -->
+    <!-- <div class="carousel-item">
+      <h2>PrinterCloud 1.2.x.x Progress</h2>
+      <br>
+      <iframe src="https://printerlogic.testrail.com/index.php?/plans/progress/1628" width=1200"" height="500"></iframe>
+    </div> -->
+<!-- End Testrail Progress -->
+
+<!-- Begin Bug Ticket Section -->
+      <!-- <div class="carousel-item">
+        <h2>PrinterCloud 1.2.x.x Bugs ready for testing</h2>
+        <br>
+      <img class="d-block w-100" src="img/testing.jpg" alt="JIRA tickets in testing">
+      <br>
+      <h3>Notes:</h3>
+      <ul>
+        <li>PI-11069 can only be tested in PRODUCTION</li>
+      </ul>
+      </div> -->
+<!-- End Bug Ticket Section -->
+
+<!-- Begin Test Flow Chart Section -->
+      <!-- <div class="carousel-item">
+      <img class="d-block w-100" src="img/test_flow.jpg" alt="Test Flow Chart">
+      </div> -->
+<!-- End Test Flow Chart Section -->
+
+<!-- Begin QA Team Section  -->
+<div class="carousel-item">
+  <h2>QA TEAM</h2>
+    <div class="card-group">
+      <div class="card">
+        <div class="card-header text-white bg-dark">QA Team</div>
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-body">
+          <ul>
+            <li class="card-text">Elisa - QA Manager</li>
+            <!-- <li class="card-text">Alan - Automation</li> -->
+            <li class="card-text">Nick - Automation</li>
+            <li class="card-text">Mike - Automation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header text-white bg-dark">QA Sprint Teams</div>
+        <div class="card-body">
+          <ul>
+            <li class="card-text">Brian - MaxxVault</li>
+            <li class="card-text">Stephen - No Comment</li>
+            <li class="card-text">Stephen - PC Load Letter</li>
+            <!-- <li class="card-text">Raj - Toner Def</li> -->
+            <li class="card-text">Erik - Still(!Done)</li>
+            <li class="card-text">Erik - Print Logix</li>
+            <li class="card-text">Phil - Ready Paper One</li>
+            <li class="card-text">Brad - Exit_1</li>
+            <li class="card-text">Brad - Integrations</li>
+            <li class="card-text">Keric - Prints of Persia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header text-white bg-dark">QA Interns</div>
+        <div class="card-body">
+          <ul>
+            <li class="card-text">Keric</li>
+            <li class="card-text">Nathaniel</li>
+            <li class="card-text">Haley</li>
+            <li class="card-text">Ian</li>
+            <!-- <li class="card-text">Brad</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- End QA Team Section -->
+</div>
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

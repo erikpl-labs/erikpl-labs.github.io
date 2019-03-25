@@ -1,0 +1,78 @@
+body {
+  min-height: auto;
+  padding-top: 4rem;
+  }
+
+h1 {
+  font-family: "Franklin Gothic Medium";
+}
+
+h2, h3 {
+  margin-left: 5px;
+}
+
+p {
+  font-size: 20px;
+}
+
+span {
+  color: red;
+}
+
+
+/* Passed */
+.passed {
+  /* Green */
+  background-color: #95d96d;
+  text-align: center;
+  border: 1px solid;
+
+}
+
+/* Blocked */
+.blocked {
+  /* Blue */
+  background-color: #8080ff;
+  text-align: center;
+  border: 1px solid;
+
+}
+
+/* Retest */
+.retest {
+  /* Yellow */
+  background-color: #FFFA38;
+  text-align: center;
+  border: 1px solid;
+}
+
+/* Failed_new */
+.failed_new {
+  /* Red */
+  background-color: #F1888f;
+  text-align: center;
+  border: 1px solid;
+
+}
+
+/* Failed_known */
+.failed_known {
+  /* Orange */
+  background-color: #ff9900;
+  text-align: center;
+  border: 1px solid;
+  }
+
+/* Untested */
+.untested {
+  /* Gray */
+  background-color: #707070;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+
+}
+
+.card-text {
+  font-size: 26px;
+}
